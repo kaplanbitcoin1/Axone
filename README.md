@@ -93,7 +93,13 @@ sed -i 's/seeds = ""/seeds = "ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-s
 ```
 
 
-# Set pruning
+# Peers
+```
+PEERS=8e7dc1bc3c9dc2106e077e6bbd48f3790dd5c934@144.91.115.146:26656,9614c853f70a0010215587a31677b99144e96507@152.228.211.19:26656,e2eeb94a734de5d4cdca408ffb3ef675183105d5@65.109.83.40:29856,8ea05a621d5fdfbda4192ae8369f289ef04c04ba@78.46.74.23:25656,e8838b99dabdbc60d776b359f9929ecbaf7ba82f@65.109.93.58:20056
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.axoned/config/config.toml
+```
+
+# Pruning
 
 ```
 sed -i \
