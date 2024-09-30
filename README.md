@@ -261,3 +261,10 @@ axoned tx staking create-validator ~/validator.json \
 ```
 /root/go/bin/axoned tx staking delegate axonevaloper1xxxxxxx 1000000uaxone --from wallet --chain-id axone-dentrite-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uaxone -y
 ```
+
+
+# To get out of jail
+```
+/root/go/bin/axoned tx slashing unjail --from <your_wallet_name> --chain-id axone-dentrite-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uaxone -y
+```
+
