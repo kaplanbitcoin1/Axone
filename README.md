@@ -17,7 +17,7 @@
 
 
 
-# Update the Server
+# Update the server
 
 ```
 sudo apt update && sudo apt upgrade -y
@@ -33,7 +33,7 @@ sudo tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
 rm go1.23.1.linux-amd64.tar.gz
 ```
 
-# Set The Configurations
+# Set the configurations
 
 ```
 export GOROOT=/usr/local/go
@@ -42,7 +42,7 @@ export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
 
-# Install Cosmovisor
+# Install cosmovisor
 
 ```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
@@ -66,14 +66,14 @@ make install
 
 
 
-# Your Moniker Name?
+# Your Moniker name?
 
 ```
 axoned init MONIKER --chain-id axone-dentrite-1
 ```
 
 
-# Download the Genesis file
+# Download the genesis file
 
 ```
 curl -L -o genesis.json 'https://drive.google.com/uc?id=1VUOkhRY2kVWFsbQbo8RrK87_H1E3km-s'
@@ -136,7 +136,7 @@ EOF
 ```
 
 
-# Start The Service
+# Start the service
 
 ```
 sudo systemctl daemon-reload
