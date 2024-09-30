@@ -80,6 +80,12 @@ curl -L -o genesis.json 'https://drive.google.com/uc?id=1VUOkhRY2kVWFsbQbo8RrK87
 mv genesis.json ~/.axoned/config
 ```
 
+# Addrbook
+
+```
+curl -L -o addrbook.json 'https://drive.google.com/uc?id=1VUOkhRY2kVWFsbQbo8RrK87_H1E3km-s'
+mv addrbook.json ~/.axoned/config
+```
 
 # SEED
 ```
