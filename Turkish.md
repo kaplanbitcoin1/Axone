@@ -206,7 +206,7 @@ axoned keys add wallet --recover
 ```
 
 
-# Validator adresi talep etmek için: (Bu işlem zorunludur çünkü bize verilen cüzdan yapısı farklı) 🧨
+### Validator adresi talep etmek için: (Bu işlem zorunludur çünkü bize verilen cüzdan yapısı farklı) 🧨
 
 ```
 axoned tendermint show-validator
