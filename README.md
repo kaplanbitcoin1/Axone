@@ -23,11 +23,6 @@
 sudo apt update && sudo apt upgrade -y
 ```
 
-```
-sudo apt install curl git jq lz4 build-essential
-```
-
-
 
 # Install the latest version of GO
 
