@@ -87,13 +87,22 @@ curl -L -o addrbook.json 'https://drive.google.com/uc?id=1VUOkhRY2kVWFsbQbo8RrK8
 mv addrbook.json ~/.axoned/config
 ```
 
-# SEED
+# Seed
 ```
 sed -i 's/seeds = ""/seeds = "ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17656"/' ~/.axoned/config/config.toml
 ```
 
 
+# Set pruning
 
+```
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "50"|' \
+  $HOME/.axoned/config/app.toml
+```
 
 
 
