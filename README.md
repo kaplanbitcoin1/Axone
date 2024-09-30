@@ -150,3 +150,42 @@ sudo systemctl start axone.service
 ```
 journalctl -u axone.service -f
 ```
+
+
+
+# Snapshot
+
+
+```
+wget -O axone_311246.tar.lz4 https://snapshots.polkachu.com/testnet-snapshots/axone/axone_311246.tar.lz4 --inet4-only
+```
+
+
+```
+sudo systemctl stop axone.service
+```
+
+```
+cp ~/.axoned/data/priv_validator_state.json  ~/.axoned/priv_validator_state.json
+```
+
+```
+lz4 -c -d axone_311246.tar.lz4  | tar -x -C $HOME/.axoned
+```
+
+
+```
+rm -v axone_311246.tar.lz4
+```
+
+```
+cp ~/.axoned/priv_validator_state.json  ~/.axoned/data/priv_validator_state.json
+```
+
+```
+sudo systemctl start axone.service
+journalctl -u axone.service -f
+```
+
+
+
