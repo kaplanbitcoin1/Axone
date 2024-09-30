@@ -58,10 +58,10 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
 # Pull the Axone binary
 
 ```
-git clone https://github.com/axone-protocol/axoned.git
+git clone https://github.com/axone-protocol/axoned axone
 cd axoned
 git checkout v10.0.0
-make build
+make install
 ```
 
 
@@ -72,11 +72,14 @@ make build
 axoned init MONIKER --chain-id axone-dentrite-1
 ```
 
+mkdir -p ~/.axoned
 
 # Download the Genesis file
 
 ```
 curl -L -o genesis.json 'https://drive.google.com/uc?id=1VUOkhRY2kVWFsbQbo8RrK87_H1E3km-s'
+mkdir -p ~/.axoned/config
+mv genesis.json ~/.axoned/config
 ```
 
 
