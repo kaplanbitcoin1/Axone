@@ -200,3 +200,48 @@ axoned keys add wallet
 ```
 axoned keys add wallet --recover
 ```
+
+
+To get your validator address
+
+```
+axoned tendermint show-validator
+```
+
+```
+cd
+```
+
+```
+nano validator.json
+```
+
+# Edit according to your own information, CommandX+CommandY+Enter
+
+```
+{
+  "pubkey": ,
+  "amount": "1000000uaxone",
+  "moniker": "test",
+  "identity": "YOUR_KEYBASE_ID",
+  "website": "YOUR_WEBSITE_URL",
+  "security": "YOUR_SECURITY_EMAIL",
+  "details": "YOUR_DETAILS",
+  "commission-rate": "0.05",
+  "commission-max-rate": "0.20",
+  "commission-max-change-rate": "0.05",
+  "min-self-delegation": "1"
+}
+```
+
+
+# You've reached your happy ending :)
+```
+axoned tx staking create-validator ~/validator.json \
+--chain-id axone-dentrite-1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices "0uaxone" \
+-y
+```
