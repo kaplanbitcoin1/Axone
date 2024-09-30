@@ -249,6 +249,11 @@ axoned tx staking create-validator ~/validator.json \
 -y
 ```
 
+# The process is complete. I would appreciate it if you left a small star.
+
+
+
+### Commands that may be useful
 
 # Delegate to your own address
 
