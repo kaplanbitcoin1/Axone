@@ -187,4 +187,14 @@ journalctl -u axone.service -f
 ```
 
 
+# Add new key
 
+```
+axoned keys add wallet
+```
+
+# To import your key
+
+```
+axoned keys add wallet --recover
+```
