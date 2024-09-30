@@ -238,7 +238,7 @@ nano validator.json
 ```
 
 
-# You've reached your happy ending :)
+# You've reached your happy ending ✅ :)
 ```
 axoned tx staking create-validator ~/validator.json \
 --chain-id axone-dentrite-1 \
@@ -249,7 +249,7 @@ axoned tx staking create-validator ~/validator.json \
 -y
 ```
 
-# The process is complete. I would appreciate it if you left a small star.
+# The process is complete. I would appreciate it if you left a small star 🐅
 
 
 
