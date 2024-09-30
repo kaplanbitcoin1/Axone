@@ -5,7 +5,7 @@
 [Website](https://axone.xyz/)<br>
 [Faucet](https://faucet.okp4.network/)<br>
 [Discord](https://discord.gg/UgW9xu92)<br>
-[Docs](https://docs.axone.xyz/technical-documentation/overview/)<br>
+[Docs](https://docs.axone.xyz/)<br>
 
 
 # System Requirements
