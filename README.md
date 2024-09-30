@@ -245,3 +245,7 @@ axoned tx staking create-validator ~/validator.json \
 --gas-prices "0uaxone" \
 -y
 ```
+
+# These are the ports that Axone uses. You can change them according to your needs.
+
+<img width="687" alt="Ekran Resmi 2024-09-30 15 01 56" src="https://github.com/user-attachments/assets/0bec540c-8c40-4b72-9131-31a9ded3119e">
