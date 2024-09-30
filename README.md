@@ -111,4 +111,42 @@ sed -i \
 ```
 
 
+# Create a service file
 
+```
+sudo tee /etc/systemd/system/axone.service > /dev/null << EOF
+[Unit]
+Description=axone node
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=/root/go/bin/axoned start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="DAEMON_HOME=$HOME/.axoned"
+Environment="DAEMON_NAME=axoned"
+Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.axoned/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+
+# Start The Service
+
+```
+sudo systemctl daemon-reload
+sudo systemctl start axone.service
+```
+
+
+# To look at the logs
+
+
+```
+journalctl -u axone.service -f
+```
