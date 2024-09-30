@@ -182,10 +182,12 @@ cp ~/.axoned/priv_validator_state.json  ~/.axoned/data/priv_validator_state.json
 ```
 
 ```
-sudo systemctl start axone.service
-journalctl -u axone.service -f
+sudo systemctl restart axone.service
 ```
 
+```
+journalctl -u axone.service -f
+```
 
 # Add new key
 
