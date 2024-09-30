@@ -50,12 +50,11 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
 
 
 
+# Pull the Axone binary
+
 ```
 sudo apt install curl git jq lz4 build-essential
 ```
-
-
-# Pull the Axone binary
 
 ```
 git clone https://github.com/axone-protocol/axoned axone
