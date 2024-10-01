@@ -159,31 +159,25 @@ journalctl -u axone.service -f
 
 # Snapshot
 
-
-```
-wget -O axone_311246.tar.lz4 https://snapshots.polkachu.com/testnet-snapshots/axone/axone_311246.tar.lz4 --inet4-only
-```
-
-
 ```
 sudo systemctl stop axone.service
 ```
 
 ```
-cp ~/.axoned/data/priv_validator_state.json  ~/.axoned/priv_validator_state.json
-```
-
-```
-lz4 -c -d axone_311246.tar.lz4  | tar -x -C $HOME/.axoned
+cp $HOME/.axoned/data/priv_validator_state.json $HOME/.axoned/priv_validator_state.json.backup
 ```
 
 
 ```
-rm -v axone_311246.tar.lz4
+rm -rf $HOME/.axoned/data
 ```
 
 ```
-cp ~/.axoned/priv_validator_state.json  ~/.axoned/data/priv_validator_state.json
+curl -L https://snapshots.kjnodes.com/axone-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.axoned
+```
+
+```
+mv $HOME/.axoned/priv_validator_state.json.backup $HOME/.axoned/data/priv_validator_state.json
 ```
 
 ```
