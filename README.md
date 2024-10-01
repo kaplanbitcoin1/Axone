@@ -6,6 +6,8 @@
 [Faucet](https://faucet.okp4.network/)<br>
 [Discord](https://discord.gg/UgW9xu92)<br>
 [Docs](https://docs.axone.xyz/)<br>
+[Explorer](https://explore.axone.xyz/)<br>
+
 
 
 # System Requirements
