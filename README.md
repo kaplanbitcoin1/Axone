@@ -157,7 +157,7 @@ journalctl -u axone.service -f
 
 
 
-# Snapshot
+# Snapshot (kjnodes)
 
 ```
 sudo systemctl stop axone.service
